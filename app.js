@@ -25,7 +25,9 @@ function getCountryTranslatedName(isoCode, language){
  * @returns {Array}
  */
 function getCountriesBySubregion(subregion){
-    //Complete with your code
+    const result = countries.filter(data => data.subregion === subregion);
+    const countriesNames = result.map( data => data.name);
+    return countriesNames;
 }
 
 function main() {
